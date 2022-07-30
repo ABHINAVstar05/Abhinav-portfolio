@@ -1,0 +1,14 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px){
+    .hamburger{
+        display: flex;
+    }
+    .aside{
+        display: none;
+    }
+    .main-content{
+        background: none;
+        left: 0;
+        padding: 65px 0 0 15px;
+    }
+}
