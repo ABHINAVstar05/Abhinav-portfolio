@@ -1,0 +1,520 @@
+@import url('https://fonts.googleapis.com/css2?family=Square+Peg&family=Tangerine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Square+Peg&family=Tangerine&display=swap');
+
+:root{
+    --bg-black-900:#f2f2fc;
+    --bg-black-100:#fdf9ff;
+    --bg-black-50:#e8dfec;
+    --text-black-900:#302e4d;
+    --text-black-700:#504e70;
+    --style-bg: #ff0000;
+}
+body{
+    line-height: 1.5;
+    font-size: 16px;
+    font-family:'Franklin Gothic Medium';
+}
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box; 
+}
+::before, ::after{
+    box-sizing: border-box;
+}
+.hidden{
+    display: none !important;
+}
+/* Side nav bar styling starts */
+.aside{
+    left: 0;
+    top: 0;
+    width: 270px;
+    border-right: 2px solid var(--bg-black-50);
+    background: var(--bg-black-100);
+    position: fixed;
+    height: 100%;
+    padding: 35px;
+}
+.aside .logo{
+    padding: 40px 20px;
+    font-size: 65px;
+    font-family: Tangerine;
+    font-weight: bolder;
+}
+.aside .logo a{
+    color: var(--text-black-900);
+    position: relative;
+}
+.aside .logo span{
+    color: orange;
+}
+.aside .logo a::before{
+    content: '';
+    position: absolute;
+    border-bottom: 7px solid var(--style-bg);
+    border-left: 7px solid var(--style-bg);
+    bottom: 0;
+    left: -10px;
+    width: 30px;
+    height: 30px;
+}
+.aside .logo a::after{
+    content: '';
+    position: absolute;
+    border-top: 7px solid var(--style-bg);
+    border-right: 7px solid var(--style-bg);
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+}
+.aside .nav{
+    padding: 80px 30px 0 27px;
+}
+.aside .nav li{
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+.aside .nav li a{
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    color: var(--text-black-900);
+    border-bottom: 2px solid var(--bg-black-50);
+}
+.aside .nav li a i{
+    margin-right: 10px;
+}
+.aside .nav .active{
+    color: var(--style-bg) ;
+}
+/* Hamburger menu code starts */
+.hamburger{
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    left: 0;
+    top: 0;
+    position: fixed;
+    background: var(--bg-black-50);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.hamburger span{
+    height: 2px;
+    width: 18px;
+    display: inline-block;
+    position: relative;
+    background: var(--style-bg);
+}
+.hamburger span::before{
+    content: '';
+    height: 2px;
+    width: 18px;
+    background: var(--style-bg);
+    position: absolute;
+    top: -6px;
+    left: 0;
+}
+.hamburger span::after{
+    content: '';
+    height: 2px;
+    width: 18px;
+    background: var(--style-bg);
+    position: absolute;
+    top: 6px;
+    left: 0;
+}
+/* Hamburger menu code ends */
+/* Side nav bar styling ends */
+
+/* Main body common styles starts */
+.main-content{
+    background: var(--bg-black-900);
+    display: block;
+    min-height: 100vh;
+    margin-left: 16%;
+    top: 0;
+    right: 0;
+    padding: 35px 15px 5px 80px;
+}
+
+/* Main body common styles ends */
+
+/* Home part styling starts */
+.home{
+    display: flex;
+    padding-top: 45px;
+}
+.home .text-info{
+    flex: 0 0 60%;
+    max-width: 60%;
+    line-height: 1.8;
+}
+.home .text-info .hello{
+    font-size: 38px;
+}
+.home .text-info .hello span{
+    color: orange;
+    font-family: "Caveat";
+    font-style: italic;
+    font-weight: 800;
+    font-size: 45px;
+}
+/* Underline animation for name in .text-info starts */
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color:#0087ca;
+}
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color:#0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}  
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+/* Underline animation for name in .text-info ends */
+.home .text-info .profession{
+    font-size: 30px;
+    font-weight: 400;
+}
+.home .text-info .profession span{
+    color: var(--style-bg);
+}
+.home .text-info p{
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+.home .text-info .interests li{
+    font-size: 18px;
+    padding-left: 40px;
+    list-style-type:circle;
+    list-style-position: inside;
+}
+.home .text-info .btn{
+    background: var(--style-bg);
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 12px 35px 12px 35px;
+    border-radius: 45px;
+    display: inline-block;
+    transition: all 0.3 ease;
+}
+.home .text-info .btn:hover{
+    transform: scale(1.1);
+}
+.home .image-info{
+    padding: 70px 0 0 18px;
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+.home .image-info::before{
+    content: '';
+    position: absolute;
+    border-bottom: 10px solid var(--style-bg);
+    border-left: 10px solid var(--style-bg);
+    bottom: 210px;
+    right: 27.5%;
+    width: 80px;
+    height: 80px;
+    border-radius: 7px;
+}
+.home .image-info::after{
+    content: '';
+    position: absolute;
+    border-top: 10px solid var(--style-bg);
+    border-right: 10px solid var(--style-bg);
+    top: 120px;
+    right: 4%;
+    width: 80px;
+    height: 80px;
+    border-radius: 7px;
+}
+.home .image-info img{
+    margin: auto;
+    border-radius: 7px;
+}
+/* Home part styling ends */
+
+/* About part styling starts */
+.about .about-title{
+    font-size: 38px;
+    position: relative;
+    margin-top: 15%;
+}
+.about .about-title h1::before{
+    content: '';
+    width: 195px;
+    height: 6px;
+    background-color: var(--style-bg);
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+.about .about-title h1::after{
+    content: '';
+    width: 150px;
+    height: 6px;
+    background-color: var(--style-bg);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 12px;
+}
+.about .about-content .about-text h2{
+    font-size: 35px;
+}
+.about .about-content .about-text h2 span1{
+    font-family: Tangerine;
+    font-size: 55px;
+    color: #0087ca;
+    font-weight: bolder;
+}
+.about .about-content .about-text h2 span1:hover{
+    color: var(--bg-black-50) ;
+    background-color: #0087ca;
+    border-radius: 10px;
+    padding: 9px 5px 0 5px;
+}
+.about .about-content .about-text h2 span2{
+    color: rgb(245, 157, 42);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.about .about-content .about-text p{
+    font-size: 25px;
+    line-height: 1.3;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid var(--bg-black-50);
+    color: #504e70;
+}
+/* Skills and info starts */
+.about .info-skills{
+    display: flex;
+    justify-content: space-around;
+    padding: 35px 10px 10px 5px;
+    font-size: 20px;
+    
+}
+.about .info-skills .info1 ul{
+    list-style-type: none;
+}
+.about .info-skills .info1 ul li{
+    border-bottom: 3px solid var(--bg-black-50);
+    color: #504e70;
+}
+.about .info-skills .info1 ul li span{
+    font-weight: bolder;
+    color: black;
+}
+.about .info-skills .info2 ul{
+    list-style-type: none;
+}
+.about .info-skills .info2 ul li{
+    border-bottom: 3px solid var(--bg-black-50);
+    color: #504e70;
+}
+.about .info-skills .info2 ul li span{
+    font-weight: bolder;
+    color: black;
+}
+.about .info-skills .skills ul{
+    list-style-type: none;
+}
+.about .info-skills .skills ul li .skill-count{
+    float: right;
+    margin-left: 100px;
+}
+.about .info-skills .skills .skill-rating{
+    background-color: rgb(200, 168, 168);
+    border-radius: 9px;
+}
+.about .info-skills .skills .skill-rating .skills-bar{
+    padding: 2px; 
+    border-radius: 9px;
+    background-color: red;
+}
+.about .info-skills .skills .skill-rating .Cpp{
+    width: 90%; 
+}
+.about .info-skills .skills .skill-rating .Java{
+    width: 80%;
+}
+.about .info-skills .skills .skill-rating .Python{
+    width: 75%;
+}
+.about .info-skills .skills .skill-rating .html{
+    width: 90%;
+}
+.about .info-skills .skills .skill-rating .css{
+    width: 80%;
+}
+.about .info-skills .skills .skill-rating .crypto{
+    width: 65%;
+}
+.about .info-skills .skills .skill-rating .oops{
+    width: 90%;
+}
+.about .info-skills .skills .skill-rating .rwd{
+    width: 70%;
+}
+.about .buttons{
+    margin-top: -87px;
+    margin-left: 100px;
+}
+.about .buttons .btn{
+    margin-right: 50px;
+    background: var(--style-bg);
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 12px 35px 12px 35px;
+    border-radius: 45px;
+    display: inline-block;
+    transition: all 0.3 ease;
+}
+.about .buttons .btn:hover{
+    transform: scale(1.1);
+}
+/* Skills and info ends */
+/* Qualification starts */
+.about .qualifications{
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-evenly;
+}
+/* Education starts */
+.about .qualifications .education{
+    flex: 0 0 45%;
+    max-width: 100%;
+}
+.about .qualifications .education h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.about .qualifications .education .col{
+    background-color: white;
+    box-shadow: 0 0 20px rgba(48, 46, 77 ,0.35);
+    padding: 35px 5px 25px 15px;
+    border-radius: 10px;
+    position: relative;
+}
+.about .qualifications .education .col .line-box{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.about .qualifications .education .col .line-box .line-item{
+    position: relative;
+    padding-left: 37px;
+    padding-bottom: 50px;
+}
+.about .qualifications .education .col .line-box .line-item:last-child{
+    padding-bottom: 0;
+}
+.about .qualifications .education .col .line-box .line-item::before{
+    content: '';
+    width: 1px;
+    position: absolute;
+    height: 100%;
+    left: 7px;
+    top: 0;
+    background-color: red;
+    margin-bottom: 10px;
+}
+.about .qualifications .education .col .line-box .line-item .circle-dot{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: red;
+}
+.about .qualifications .education .col .line-box .line-item h3{
+    font-size: 20px;
+}
+.about .qualifications .education .col .line-box .line-item .line-text{
+    padding: 8px 0 0 15px;
+}
+.about .qualifications .education .col .line-box .line-item .line-text .bolder{
+    font-weight: 900;
+    font-size: 16px;
+}
+/* Education ends */
+/* Certificates and Certifications starts */
+.about .qualifications .cnc{
+    flex: 0 0 45%;
+    max-width: 100%;
+}
+.about .qualifications .cnc h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.about .qualifications .cnc .col{
+    background-color: white;
+    box-shadow: 0 0 20px rgba(48, 46, 77 ,0.35);
+    padding: 35px 5px 25px 15px;
+    border-radius: 10px;
+    position: relative;
+}
+.about .qualifications .cnc .col .line-box{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.about .qualifications .cnc .col .line-box .line-item{
+    position: relative;
+    padding-left: 37px;
+    padding-bottom: 50px;
+}
+.about .qualifications .cnc .col .line-box .line-item:last-child{
+    padding-bottom: 0;
+}
+.about .qualifications .cnc .col .line-box .line-item::before{
+    content: '';
+    width: 1px;
+    position: absolute;
+    height: 100%;
+    left: 7px;
+    top: 0;
+    background-color: red;
+    margin-bottom: 10px;
+}
+.about .qualifications .cnc .col .line-box .line-item .circle-dot{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: red;
+}
+.about .qualifications .cnc .col .line-box .line-item h3{
+    font-size: 20px;
+}
+.about .qualifications .cnc .col .line-box .line-item .line-text{
+    padding: 8px 0 0 15px;
+}
+.about .qualifications .cnc .col .line-box .line-item .line-text .bolder{
+    font-weight: 900;
+    font-size: 16px;
+}
+/* Certificates and Certifications starts */
+/* Qualification ends */
+/* About part styling ends */
