@@ -350,7 +350,7 @@ body{
     background-color: red;
 }
 .about .info-skills .skills .skill-rating .Cpp{
-    width: 90%; 
+    width: 75%; 
 }
 .about .info-skills .skills .skill-rating .Java{
     width: 80%;
@@ -364,13 +364,16 @@ body{
 .about .info-skills .skills .skill-rating .css{
     width: 80%;
 }
-.about .info-skills .skills .skill-rating .crypto{
-    width: 65%;
+.about .info-skills .skills .skill-rating .git{
+    width: 80%;
 }
 .about .info-skills .skills .skill-rating .oops{
     width: 90%;
 }
 .about .info-skills .skills .skill-rating .rwd{
+    width: 70%;
+}
+.about .info-skills .skills .skill-rating .sql{
     width: 70%;
 }
 .about .buttons{
